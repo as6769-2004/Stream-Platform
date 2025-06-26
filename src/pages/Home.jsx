@@ -3,11 +3,12 @@ import { useNavigate } from "react-router-dom";
 
 export default function Home({ user }) {
   const navigate = useNavigate();
+  console.log("User object:", user);
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
       <img
-        src={user.photoURL}
+        src={user.photoURL || "https://via.placeholder.com/150"}
         alt="Avatar"
         className="w-20 h-20 rounded-full mb-4 shadow"
       />
